@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import AuthContext from '../../context/AuthContext/AuthContext';
+import SocialLogin from '../shared/SocialLogin';
 
 const SignIn = () => {
 
@@ -39,6 +40,10 @@ const SignIn = () => {
                             <button className="btn btn-neutral mt-4">Sign In</button>
                         </fieldset>
                     </form>
+                    <div>
+                    <div className="divider">OR</div>
+                    <div className="card bg-base-100 rounded-box grid h-20 place-items-center"><SocialLogin></SocialLogin></div>
+                    </div>
                 </div>
 
                 {/* Lottie Animation */}

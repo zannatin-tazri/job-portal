@@ -1,6 +1,7 @@
 import { LottiePlayer } from '@lottiefiles/lottie-player';
 import React, { useContext, useState } from 'react';
 import AuthContext from '../../context/AuthContext/AuthContext';
+import SocialLogin from '../shared/SocialLogin';
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
@@ -44,7 +45,7 @@ const Register = () => {
 
     return (
         <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex flex-col md:flex-row justify-center items-center gap-10">
+<div className="hero-content flex flex-col-reverse md:flex-row justify-center items-center gap-10">
 
                 {/* Register Form */}
                 <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
@@ -60,6 +61,11 @@ const Register = () => {
                             <button className="btn btn-neutral mt-4">Register</button>
                         </fieldset>
                     </form>
+
+                    <div>
+                    <div className="divider">OR</div>
+                    <div className="card bg-base-100 rounded-box grid h-20 place-items-center"><SocialLogin></SocialLogin></div>
+                    </div>
                 </div>
 
                 {/* Lottie Animation */}
