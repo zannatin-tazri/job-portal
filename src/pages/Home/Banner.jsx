@@ -6,7 +6,7 @@ import team2 from '../../assets/team2.jpg'
 const Banner = () => {
     return (
         <div className="hero bg-base-200 min-h-96">
-  <div className="hero-content flex-col lg:flex-row-reverse">
+  <div className="px-24 hero-content flex-col lg:flex-row-reverse">
     <div className='flex-1'>
     <motion.img
       src={team2}
@@ -25,7 +25,7 @@ const Banner = () => {
       <motion.h1 
       animate={{x:50}}
       transition={{duration:2, delay:1, ease: easeOut}}
-      className="text-5xl font-bold">Latest <motion.span
+      className="lg:text-5xl text-3xl font-bold">Latest <motion.span
       animate={{color:['#DDA0DD','#4B0082']}}
       transition={{duration:2, repeat: Infinity, delay: 1.5}}
       >Job</motion.span> For You</motion.h1>
