@@ -13,10 +13,10 @@ const HotJobs = () => {
     return (
         <div>
             <h3>Job of the day</h3>
-            <div>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                 {
                     jobs.map(job=><HotJobsCard key={job.id}
-                    jobs={job}></HotJobsCard>)
+                    job={job}></HotJobsCard>)
                 }
             </div>
         </div>
