@@ -1,48 +1,51 @@
 import React, { useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import SocialLogin from '../shared/SocialLogin';
 
 const SignIn = () => {
+    const { signInUser } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
-    const{signInUser}=useContext(AuthContext);
+    const from = location.state?.from?.pathname || '/';
 
     const handleSignIn = e => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(email,password);
 
-        signInUser(email,password)
-        .then(result=>{
-            console.log('Sign In', result.user)
+        signInUser(email, password)
+        .then(result => {
+            console.log('Sign In', result.user);
+            navigate(from, { replace: true });
         })
-        .catch(error=>{
+        .catch(error => {
             console.log(error);
-        })
-          
+        });
     };
+
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex flex-col md:flex-row justify-center items-center gap-10">
-
-                {/* Register Form */}
+                {/* Sign In Form */}
                 <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
                     <h1 className="pr-5 ml-8 mt-4 text-4xl md:text-5xl font-bold">Sign In now!</h1>
                     <form onSubmit={handleSignIn} className="card-body">
                         <fieldset className="fieldset">
                             <label className="label">Email</label>
-                            <input type="email" name='email' className="input" placeholder="Email" required />
+                            <input type="email" name="email" className="input" placeholder="Email" required />
                             <label className="label">Password</label>
-                            <input type="password" name='password' className="input" placeholder="Password" required />
-                            
-                            
+                            <input type="password" name="password" className="input" placeholder="Password" required />
                             <button className="btn btn-neutral mt-4">Sign In</button>
                         </fieldset>
                     </form>
                     <div>
-                    <div className="divider">OR</div>
-                    <div className="card bg-base-100 rounded-box grid h-20 place-items-center"><SocialLogin></SocialLogin></div>
+                        <div className="divider">OR</div>
+                        <div className="card bg-base-100 rounded-box grid h-20 place-items-center">
+                            <SocialLogin />
+                        </div>
                     </div>
                 </div>
 
@@ -56,7 +59,6 @@ const SignIn = () => {
                         style={{ width: "300px", height: "300px" }}
                     ></lottie-player>
                 </div>
-
             </div>
         </div>
     );
