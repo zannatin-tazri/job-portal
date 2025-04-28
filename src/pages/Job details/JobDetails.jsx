@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const JobDetails = () => {
 
-  const { salaryRange, applicationDeadline, category, location, title, jobType, company, responsibilities, requirements, description } = useLoaderData();
+  const { _id,salaryRange, applicationDeadline, category, location, title, jobType, company, responsibilities, requirements, description } = useLoaderData();
 
   return (
     <div className='px-3'>
@@ -36,12 +36,16 @@ const JobDetails = () => {
                 </li>
               ))}
             </div>
-            <p className='pb-3'><h3 className='font-semibold'>Salary :</h3> {salaryRange.min} - {salaryRange.max} {salaryRange.currency}</p>
-
-            <p className='pb-4'><h3 className='font-semibold'>Location :</h3> {location}</p>
-            <p className='pb-4'><h3 className='font-semibold'>Application Deadline</h3> {applicationDeadline}</p>
-
-            <button className="btn btn-primary">Apply Now</button>
+            <h3 className='font-semibold'>Salary :</h3>
+            <p className='pb-3'> {salaryRange.min} - {salaryRange.max} {salaryRange.currency}</p>
+            <h3 className='font-semibold'>Location :</h3>
+            <p className='pb-4'> {location}</p>
+            <h3 className='font-semibold'>Application Deadline</h3>
+            <p className='pb-4'> {applicationDeadline}</p>
+            
+            <Link to={`/jobApply/${_id}`}>            
+               <button className="btn btn-primary">Apply Now</button>
+            </Link>
           </div>
         </div>
       </div>
