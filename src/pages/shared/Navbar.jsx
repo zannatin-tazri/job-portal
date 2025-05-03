@@ -16,9 +16,9 @@ const Navbar = () => {
     })
   }
     const links = <>
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/myApplications'>My Applications</NavLink></li>
-            <li><NavLink to='/'>Home</NavLink></li>
+            <li className='text-purple-950 font-semibold text-lg'><NavLink to='/'>Home</NavLink></li>
+            <li className='text-purple-950 font-semibold text-lg'><NavLink to='/myApplications'>My Applications</NavLink></li>
+            <li className='text-purple-950 font-semibold text-lg'><NavLink to='/'>Add a Job</NavLink></li>
            
     </>
     return (
@@ -35,8 +35,8 @@ const Navbar = () => {
        {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"><img className='w-12'src={logo} alt="" />
-    <h3>Job Portal</h3>
+    <a className="btn btn-ghost text-3xl text-purple-950 font-semibold"><img className='w-12'src={logo} alt="" />
+    <h3>Hunt For Hire</h3>
     </a>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -49,8 +49,8 @@ const Navbar = () => {
       user? <>
       <button onClick={handleSignout} className='btn'>Sign Out</button>
       </> : <>
-      <Link className='btn' to='/register'>Register</Link>
-    <Link className='btn' to='/signin'>Sign In</Link>
+      <Link className='btn btn-primary bg-purple-700' to='/register'>Register</Link>
+    <Link className='btn btn-primary bg-purple-700' to='/signin'>Sign In</Link>
     
       </>
     }

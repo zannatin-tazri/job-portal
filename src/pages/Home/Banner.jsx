@@ -6,7 +6,7 @@ import team2 from '../../assets/team2.jpg'
 const Banner = () => {
     return (
         <div className="hero bg-base-200 min-h-96">
-  <div className="px-24 hero-content flex-col lg:flex-row-reverse">
+  <div className="px-28  hero-content flex-col lg:flex-row-reverse">
     <div className='flex-1'>
     <motion.img
       src={team2}
@@ -25,15 +25,14 @@ const Banner = () => {
       <motion.h1 
       animate={{x:50}}
       transition={{duration:2, delay:1, ease: easeOut}}
-      className="lg:text-5xl text-3xl font-bold">Latest <motion.span
+      className="lg:text-5xl text-3xl font-bold">Welcome to the <motion.span
       animate={{color:['#DDA0DD','#4B0082']}}
       transition={{duration:2, repeat: Infinity, delay: 1.5}}
-      >Job</motion.span> For You</motion.h1>
-      <p className="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      >Hunt For Hire</motion.span> </motion.h1>
+      <p className="ms-12 py-6 text-purple-950 font-semibold text-xl">
+        Join with us to discover your perfect job or the right talent to hire.
       </p>
-      <button className="btn btn-primary">Get Started</button>
+      <button className="ms-12 btn btn-primary bg-purple-700">Get Started</button>
     </div>
   </div>
 </div>

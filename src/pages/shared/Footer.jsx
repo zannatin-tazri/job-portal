@@ -6,8 +6,8 @@ const Footer = () => {
         <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
   <aside>
     <img src={logo} alt="" />
-    <p>
-      Job Portal Ltd.
+    <p className='text-purple-950 font-semibold'>
+    Hunt For Hire Ltd.
       <br />
       Providing reliable jobs since 1992
     </p>
