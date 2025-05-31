@@ -8,40 +8,57 @@ const Register = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
-    const handleRegister = e => {
-        e.preventDefault();
-        const form = e.target;
-        const email = form.email.value.trim();
-        const password = form.password.value.trim();
+    const handleRegister = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value.trim();
+    const password = form.password.value.trim();
 
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/;
 
-        if (!email || !password) {
-            setError("Email and password fields cannot be empty.");
-            setSuccess('');
-            return;
-        }
-
-        if (!passwordRegex.test(password)) {
-            setError("Password must be at least 6 characters and include uppercase, lowercase, number, and symbol.");
-            setSuccess('');
-            return;
-        }
-
-        setError('');
+    if (!email || !password) {
+        setError("Email and password fields cannot be empty.");
         setSuccess('');
-        createUser(email, password)
-            .then(result => {
-                setSuccess("Account created successfully!");
-                form.reset();
-                console.log(result.user);
-            })
-            .catch(error => {
-                setError(error.message);
-                setSuccess('');
-                console.error(error.message);
-            });
-    };
+        return;
+    }
+
+    if (!passwordRegex.test(password)) {
+        setError("Password must be at least 6 characters and include uppercase, lowercase, number, and symbol.");
+        setSuccess('');
+        return;
+    }
+
+    setError('');
+    setSuccess('');
+
+    try {
+        const result = await createUser(email, password);
+        console.log(result.user);
+        setSuccess("Account created successfully!");
+        form.reset();
+
+        // Save user to backend MongoDB
+        const newUser = { email };
+        const res = await fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newUser),
+        });
+
+        if (!res.ok) {
+            const data = await res.json();
+            throw new Error(data.message || 'Failed to save user to database.');
+        }
+
+    } catch (error) {
+        setError(error.message);
+        setSuccess('');
+        console.error(error.message);
+    }
+};
+
 
     return (
         <div className="hero bg-base-200 min-h-screen">

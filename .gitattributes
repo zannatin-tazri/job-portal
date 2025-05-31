@@ -1,0 +1,17 @@
+# Use LF for all text files to be Linux/CentOS friendly
+* text eol=lf
+
+# Ensure shell scripts and Dockerfiles are treated correctly
+*.sh text eol=lf
+Dockerfile text eol=lf
+
+# Treat binary files properly (no conversion)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
