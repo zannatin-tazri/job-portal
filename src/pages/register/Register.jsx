@@ -2,11 +2,14 @@ import { LottiePlayer } from '@lottiefiles/lottie-player';
 import React, { useContext, useState } from 'react';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import SocialLogin from '../shared/SocialLogin';
+import { useNavigate } from 'react-router-dom'; 
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate();
+
 
     const handleRegister = async (e) => {
     e.preventDefault();
@@ -36,6 +39,8 @@ const Register = () => {
         console.log(result.user);
         setSuccess("Account created successfully!");
         form.reset();
+        navigate('/'); 
+        
 
         // Save user to backend MongoDB
         const newUser = { email };

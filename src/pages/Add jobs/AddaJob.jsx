@@ -60,7 +60,7 @@ const AddaJob = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-base-100 p-6">
+        <div className="text-purple-800 flex items-center justify-center min-h-screen bg-base-100 p-6">
             <form onSubmit={handleSubmit} className="bg-base-200 border border-base-300 rounded-box p-6 w-full max-w-2xl text-lg">
                 <legend className="text-2xl font-bold mb-4">Post a Job</legend>
 
@@ -106,7 +106,7 @@ const AddaJob = () => {
                 <label className="label mt-3">Company Logo URL</label>
                 <input name="company_logo" type="url" className="input input-bordered w-full" onChange={handleChange} required />
 
-                <button type="submit" className="btn btn-neutral mt-6 w-full">Post Job</button>
+                <button type="submit" className="btn bg-purple-700 text-base-100 mt-6 w-full">Post Job</button>
             </form>
         </div>
     );
