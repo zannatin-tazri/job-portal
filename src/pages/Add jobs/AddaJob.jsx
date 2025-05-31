@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const ManageJobs = () => {
+const AddaJob = () => {
     const [formData, setFormData] = useState({
         title: '',
         location: '',
@@ -112,4 +112,4 @@ const ManageJobs = () => {
     );
 };
 
-export default ManageJobs;
+export default AddaJob;

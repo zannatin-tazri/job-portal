@@ -20,7 +20,7 @@ const Navbar = () => {
             <li className='text-purple-950 font-semibold text-lg'><NavLink to='/profile'>Profile</NavLink></li>
             <li className='text-purple-950 font-semibold text-lg'><NavLink to='/myApplications'>My Applications</NavLink></li>
             <li className='text-purple-950 font-semibold text-lg'><NavLink to='/berecruiter'>Be a Recruiter</NavLink></li>
-            <li className='text-purple-950 font-semibold text-lg'><NavLink to='/managejobs'>Manage Jobs</NavLink></li>
+            <li className='text-purple-950 font-semibold text-lg'><NavLink to='/addjobs'>Add Jobs</NavLink></li>
            
     </>
     return (
