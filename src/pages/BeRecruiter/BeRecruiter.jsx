@@ -2,20 +2,20 @@ import React from 'react';
 
 const BeRecruiter = () => {
     return (
-        <div>
-            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-                <legend className="fieldset-legend">Add Information</legend>
+        <div className="flex items-center justify-center text-purple-800 min-h-screen bg-base-100">
+            <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-full max-w-md border p-6 text-lg">
+                <legend className="fieldset-legend text-xl text-purple-800  font-bold mb-2">Add Information</legend>
 
-                <label className="label">Email</label>
-                <input type="email" className="input" placeholder="Email" />
+                <label className="label text-xl font-bold">Your Organizational Email</label>
+                <input type="email" className="input input-bordered w-full text-base" placeholder="Email" />
 
-                <label className="label">Your NID</label>
-                <input type="number" className="input" placeholder="NID" />
+                <label className="label text-xl font-bold">Your NID</label>
+                <input type="number" className="input input-bordered w-full text-base" placeholder="NID" />
 
-                <label className="label">Your Organization Name</label>
-                <input type="text" className="input" placeholder="e.g : Google" />
+                <label className="label text-xl font-bold">Your Organization Name</label>
+                <input type="text" className="input input-bordered w-full text-base" placeholder="e.g: Google" />
 
-                <button className="btn btn-neutral mt-4">Save</button>
+                <button className="btn bg-purple-700 text-base-100 mt-6 w-full text-lg">Save</button>
             </fieldset>
         </div>
     );

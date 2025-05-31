@@ -75,7 +75,7 @@ const Register = () => {
                             <input type="password" name='password' className="input" placeholder="Password" required />
                             {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
                             {success && <p className="text-green-500 text-sm mt-2">{success}</p>}
-                            <button className="btn btn-neutral mt-4">Register</button>
+                            <button className="btn bg-purple-700 text-base-100 mt-4">Register</button>
                         </fieldset>
                     </form>
 

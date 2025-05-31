@@ -38,7 +38,7 @@ const SignIn = () => {
                             <input type="email" name="email" className="input" placeholder="Email" required />
                             <label className="label">Password</label>
                             <input type="password" name="password" className="input" placeholder="Password" required />
-                            <button className="btn btn-neutral mt-4">Sign In</button>
+                            <button className="btn bg-purple-700 text-base-100 mt-4">Sign In</button>
                         </fieldset>
                     </form>
                     <div>
