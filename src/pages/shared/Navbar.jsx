@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../../context/AuthContext/AuthContext';
 import logo from '../../assets/job-logo.png';
+import { Link as ScrollLink } from "react-scroll";
+
 
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
@@ -41,6 +43,7 @@ const Navbar = () => {
       <li className="text-purple-950 font-semibold text-lg">
         <NavLink to="/myApplications">My Applications</NavLink>
       </li>
+      
       {user && userRole === 'recruiter' && (
         <li className="text-purple-950 font-semibold text-lg">
           <NavLink to="/addjobs">Add Jobs</NavLink>
@@ -51,6 +54,9 @@ const Navbar = () => {
           <NavLink to="/berecruiter">Be a Recruiter</NavLink>
         </li>
       )}
+      <li className="text-purple-950 font-semibold text-lg">
+        <ScrollLink to="about">About</ScrollLink>
+      </li>
     </>
   );
 

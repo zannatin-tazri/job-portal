@@ -5,7 +5,7 @@ const HotJobsCard = ({ job }) => {
     const { _id, title, company, company_logo, requirements, description, location, salaryRange } = job;
 
     return (
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-base-100 rounded-3xl shadow-lg shadow-purple-300">
             <div className='flex gap-2 m-2 p-2'>
                 <figure>
                     <img className='w-16'
@@ -21,7 +21,7 @@ const HotJobsCard = ({ job }) => {
             <div className="card-body">
                 <h2 className="card-title">
                     {title}
-                    <div className="badge badge-secondary">NEW</div>
+                    
                 </h2>
                 <p>{description}</p>
 

@@ -14,7 +14,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="hero bg-base-200 min-h-[30rem]">
+    <div className="hero shadow-2xl shadow-purple-200 bg-base-200 min-h-[30rem]">
       <div className="hero-content flex-col-reverse lg:flex-row-reverse gap-10 px-4 sm:px-6 md:px-10 lg:px-28">
 
         {/* Right Section - Images */}

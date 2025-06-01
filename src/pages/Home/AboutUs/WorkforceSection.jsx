@@ -41,7 +41,7 @@ const WorkforceSection = () => {
       </div>
 
       {/* Right Section with Tabs */}
-      <div className="bg-gray-100 rounded-2xl p-4 sm:p-6 md:p-8 w-full md:w-1/2 h-auto">
+      <div className="bg-gray-100 rounded-2xl p-4 shadow-2xl shadow-purple-300 sm:p-6 md:p-8 w-full md:w-1/2 h-auto">
         <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mb-4">
           {Object.keys(tabData).map((tab) => (
             <button
