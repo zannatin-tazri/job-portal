@@ -32,8 +32,6 @@ const JobApply = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log('Server Response:', data); // 🔥 See exactly what backend sends
-
             if (data.insertedId || data.success) {
                 Swal.fire({
                     position: "top-end",
@@ -42,7 +40,7 @@ const JobApply = () => {
                     showConfirmButton: false,
                     timer: 1500
                 }).then(() => {
-                    navigate('/myApplications'); // ✅ Navigate after alert closes
+                    navigate('/myApplications');
                 });
             } else {
                 Swal.fire({
@@ -67,18 +65,49 @@ const JobApply = () => {
     };
 
     return (
-        <div className="bg-base-100 w-full shadow-2xl">
-            <h1 className="text-5xl text-center font-bold mb-8">Apply Job and Good Luck</h1>
+        <div className="min-h-screen flex items-center justify-center bg-base-100 px-4 py-12">
+            {/* Increased max-width and padding */}
+            <div className="w-full max-w-3xl bg-white shadow-2xl rounded-xl p-10">
+                <h1 className="text-3xl sm:text-4xl text-center text-purple-900 font-bold mb-8">
+                    Apply Job and Good Luck
+                </h1>
 
-            <form onSubmit={submitJobApplication} className="w-full card-body">
-                <label className="label">LinkedIn URL</label>
-                <input type="url" name="linkedin" className="input" placeholder="URL" />
-                <label className="label">Github URL</label>
-                <input type="url" name="github" className="input" placeholder="URL" />
-                <label className="label">Resume URL</label>
-                <input type="url" name="resume" className="input" placeholder="URL" />
-                <button className="btn btn-neutral mt-4">Apply</button>
-            </form>
+                <form onSubmit={submitJobApplication} className="space-y-6">
+                    <div>
+                        <label className="label font-semibold">LinkedIn URL</label>
+                        <input
+                            type="url"
+                            name="linkedin"
+                            className="input input-bordered w-full"
+                            placeholder="https://linkedin.com/in/your-profile"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label className="label font-semibold">GitHub URL</label>
+                        <input
+                            type="url"
+                            name="github"
+                            className="input input-bordered w-full"
+                            placeholder="https://github.com/your-username"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label className="label font-semibold">Resume URL</label>
+                        <input
+                            type="url"
+                            name="resume"
+                            className="input input-bordered w-full"
+                            placeholder="https://yourdomain.com/resume.pdf"
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="btn bg-purple-700 text-base-100 w-full mt-6 text-lg">
+                        Apply Now
+                    </button>
+                </form>
+            </div>
         </div>
     );
 };

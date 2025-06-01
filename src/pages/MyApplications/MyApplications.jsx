@@ -33,7 +33,7 @@ const MyApplications = () => {
 
   return (
     <div>
-      <h2 className='text-5xl py-10 text-center'>My Applications</h2>
+      <h2 className='text-5xl py-10 text-purple-900 font-bold text-center'>Your applied jobs are here</h2>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}

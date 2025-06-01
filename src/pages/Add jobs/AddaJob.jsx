@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 const AddaJob = () => {
     const [formData, setFormData] = useState({
@@ -25,6 +27,8 @@ const AddaJob = () => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
+    const navigate = useNavigate();
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -53,6 +57,7 @@ const AddaJob = () => {
         try {
             await axios.post('http://localhost:3000/jobs', jobData);
             alert("Job Posted Successfully!");
+            navigate('/');
         } catch (error) {
             console.error(error);
             alert("Failed to post job");

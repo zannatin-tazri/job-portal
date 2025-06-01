@@ -7,7 +7,7 @@ const AboutUs = () => {
     <section className="flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 py-10 md:py-16 gap-8 md:gap-10">
       {/* Left Section */}
       <div className="md:w-1/2 space-y-6">
-        <h2 className="text-3xl sm:text-4xl font-bold text-black">About Us</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-purple-800">About Us</h2>
         <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
           FlexWork offers flexible working hours, designed for growing businesses and
           driven freelance professionals. We bridge the gap between opportunity and flexibility.
