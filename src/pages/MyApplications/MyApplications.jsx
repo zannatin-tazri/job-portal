@@ -75,7 +75,11 @@ const MyApplications = () => {
                     </div>
                   </td>
                   <td>{job.title}</td>
-                  <td>{job.salaryRange.min} - {job.salaryRange.max}</td>
+                  <td>
+                    {job.salaryRange
+                      ? `${job.salaryRange.min} - ${job.salaryRange.max}`
+                      : 'Not specified'}
+                  </td>
                   <th>
                     <button
                       onClick={() => handleDelete(job._id)}

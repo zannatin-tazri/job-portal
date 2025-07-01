@@ -35,11 +35,7 @@ const Navbar = () => {
       <li className="text-purple-950 font-semibold text-lg">
         <NavLink to="/">Home</NavLink>
       </li>
-      {user && (
-        <li className="text-purple-950 font-semibold text-lg">
-          <NavLink to="/profile">Profile</NavLink>
-        </li>
-      )}
+      
       <li className="text-purple-950 font-semibold text-lg">
         <NavLink to="/myApplications">My Applications</NavLink>
       </li>
@@ -54,6 +50,9 @@ const Navbar = () => {
           <NavLink to="/berecruiter">Be a Recruiter</NavLink>
         </li>
       )}
+      <li className="text-purple-950 font-semibold text-lg">
+        <NavLink to="/jobmatcher">Test Your Skill</NavLink>
+      </li>
       <li className="text-purple-950 font-semibold text-lg">
         <ScrollLink to="about">About</ScrollLink>
       </li>

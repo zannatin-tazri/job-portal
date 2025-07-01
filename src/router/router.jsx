@@ -10,9 +10,9 @@ import JobDetails from "../pages/Job details/JobDetails";
 import PrivateRoute from "./PrivateRoute";
 import JobApply from "../pages/jobApply/JobApply";
 import MyApplications from "../pages/MyApplications/MyApplications";
-import Profile from "../pages/Profile/Profile";
 import BeRecruiter from "../pages/BeRecruiter/BeRecruiter";
 import AddaJob from "../pages/Add jobs/AddaJob";
+import JobMatcher from "../pages/Skill Test/JobMatcher";
   
 const router = createBrowserRouter([
     {
@@ -38,12 +38,12 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><MyApplications></MyApplications></PrivateRoute>
             },
             {
-                path: '/profile',
-                element: <PrivateRoute><Profile></Profile></PrivateRoute>
-            },
-            {
                 path: '/berecruiter',
                 element:<BeRecruiter></BeRecruiter>
+            },
+            {
+                path: '/jobmatcher',
+                element:<JobMatcher></JobMatcher>
             },
             {
                 path: '/addjobs',
