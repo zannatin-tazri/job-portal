@@ -47,7 +47,7 @@ const BeRecruiter = () => {
         <div className="flex items-center justify-center text-purple-800 min-h-screen bg-base-100 px-6 py-12">
             <form onSubmit={handleSubmit} className="w-full max-w-4xl">
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-2xl border p-10 text-lg">
-                    <legend className="fieldset-legend text-3xl text-purple-800 font-extrabold mb-6">Add Information</legend>
+                    <legend className="fieldset-legend text-4xl text-purple-800 font-extrabold mb-6">Add Information</legend>
 
                     <label className="label text-2xl font-bold mb-2">Your NID</label>
                     <input

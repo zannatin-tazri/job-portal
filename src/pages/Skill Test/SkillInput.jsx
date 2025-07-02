@@ -30,7 +30,7 @@ const SkillInput = ({ onChange }) => {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleAddSkill()}
         />
-        <button className="btn btn-primary" onClick={handleAddSkill}>Add</button>
+        <button className="btn btn-primary bg-purple-700 text-white" onClick={handleAddSkill}>Add</button>
       </div>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
