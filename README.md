@@ -29,9 +29,15 @@ Create .env file to the same level as package.json and paste environment variabl
 # Required environment variables
 
 VITE_apiKey=AIzaSyCZzExOgDa5evVy70P-RbEsnnKQ4RkgqUo
+
 VITE_authDomain=job-portal-805b3.firebaseapp.com
+
 VITE_projectId=job-portal-805b3
+
 VITE_storageBucket=job-portal-805b3.firebasestorage.app
+
 VITE_messagingSenderId=483149463192
+
 VITE_appId=1:483149463192:web:96efda9840f6aa4ccd9aed
+
 VITE_measurementId=G-QF3W1QNZLW
