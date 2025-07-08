@@ -1,12 +1,37 @@
-# React + Vite
+# Prerequisites
+Before running this project, make sure you have the following installed:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Node.js (v18 or later)
 
-Currently, two official plugins are available:
+npm (Node Package Manager)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Docker & Docker Compose
 
-## Expanding the ESLint configuration
+Git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+VS Code or any code editor  
+Make sure server is running (job-portal-server)
+
+# Run project locally
+Commands-
+
+-git clone https://github.com/zannatin-tazri/job-portal.git
+
+-cd job-portal
+
+Create .env file to the same level as package.json and paste environment variables
+
+-"npm install"
+
+-"npm run dev"
+
+
+# Required environment variables
+
+VITE_apiKey=AIzaSyCZzExOgDa5evVy70P-RbEsnnKQ4RkgqUo
+VITE_authDomain=job-portal-805b3.firebaseapp.com
+VITE_projectId=job-portal-805b3
+VITE_storageBucket=job-portal-805b3.firebasestorage.app
+VITE_messagingSenderId=483149463192
+VITE_appId=1:483149463192:web:96efda9840f6aa4ccd9aed
+VITE_measurementId=G-QF3W1QNZLW
